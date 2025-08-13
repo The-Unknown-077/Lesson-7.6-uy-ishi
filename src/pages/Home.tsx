@@ -19,6 +19,10 @@ const Home = () => {
   const [editData, setEditData] = useState<ICountry | null>(null);
   const [countries, setCountries] = useState<ICountry[]>([]);
 
+  const for_error = countries
+  console.log(for_error);
+  
+
   const fetchCountries = () => {
     api.get("/countrys")
       .then(res => setCountries(res.data))
